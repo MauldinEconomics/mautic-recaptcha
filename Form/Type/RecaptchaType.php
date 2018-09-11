@@ -41,6 +41,16 @@ class RecaptchaType extends AbstractType
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults([
+            'invisible' => false,
+        ]);
+    }
+
+    /**
      * @return string
      */
     public function getName()
